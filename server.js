@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // URL вашей канбан-доски
-const KANBAN_API_URL = 'https://smolkalwdz-kanban-frontenq-1a43.twc1.net';
+const KANBAN_API_URL = 'smolkalwdz-kanban-backend-3d00.twc1.net';
 
 // Обработчик webhook от AmoCRM
 app.post('/api/amo-webhook', async (req, res) => {
@@ -174,4 +174,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Сервер запущен на порту ${PORT}`);
   console.log(`📡 Webhook URL: http://localhost:${PORT}/api/amo-webhook`);
   console.log(`🔗 Канбан API: ${KANBAN_API_URL}`);
+
 }); 
